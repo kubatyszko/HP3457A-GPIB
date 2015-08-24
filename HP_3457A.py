@@ -23,7 +23,7 @@ class hp():
 		self.gotPlc = False
 		self.plc = 10
 		self.digits = '6.5'
-		self.ser = serial.Serial(com, 460800, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE, bytesize=serial.EIGHTBITS, timeout=3)
+		self.ser = serial.Serial(com, 115200, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE, bytesize=serial.EIGHTBITS, timeout=3)
 		self.ser.write('++rst\r\n')
 		time.sleep(2)
 		self.ser.write('++addr 22\r\n')
